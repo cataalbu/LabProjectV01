@@ -1,0 +1,15 @@
+Tema: 1
+Nota: 1.0
+Predata in saptamana: 10
+Feedback: ok
+
+Tema: 2
+Nota: 5.0
+Predata in saptamana: 10
+Feedback: ddd
+
+Tema: 3
+Nota: 7.5
+Predata in saptamana: 10
+Feedback: ss
+
