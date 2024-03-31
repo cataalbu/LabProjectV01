@@ -15,7 +15,7 @@ import java.util.stream.StreamSupport;
 
 import static org.junit.Assert.assertEquals;
 
-public class AppTest_addStudent {
+public class AppTest {
 
     public Service service;
 
