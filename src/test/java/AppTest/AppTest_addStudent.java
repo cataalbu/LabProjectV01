@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.stream.StreamSupport;
 
+//@RunWith(JUnit4.class)
 public class AppTest_addStudent {
 
     public Service service;
