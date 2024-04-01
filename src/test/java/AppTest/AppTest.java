@@ -19,6 +19,7 @@ public class AppTest {
 
     public Service service;
 
+    /** Assignment 2**/
     @Before
     public void beforeSetup() {
         Validator<Student> studentValidator = new StudentValidator();
@@ -90,5 +91,22 @@ public class AppTest {
         long studentsCount = StreamSupport.stream(service.findAllStudents().spliterator(), false).count();
         service.saveStudent("100", "Nume", 10000);
         assertEquals(studentsCount, StreamSupport.stream(service.findAllStudents().spliterator(), false).count());
+    }
+
+    /** Assignment 3**/
+    @Test
+    public void testAddTemaToList() {
+        long temaCount = StreamSupport.stream(service.findAllTeme().spliterator(), false).count();
+        service.saveTema("100", "descriere", 7, 5);
+
+        assertEquals(temaCount + 1, StreamSupport.stream(service.findAllTeme().spliterator(), false).count());
+        service.deleteTema("100");
+    }
+
+    @Test
+    public void testAddEmptyTemaIdToList() {
+        long temaCount = StreamSupport.stream(service.findAllTeme().spliterator(), false).count();
+        service.saveTema("", "descriere", 7, 5);
+        assertEquals(temaCount, StreamSupport.stream(service.findAllTeme().spliterator(), false).count());
     }
 }
