@@ -18,7 +18,7 @@ import java.util.stream.StreamSupport;
 
 import static org.junit.Assert.assertEquals;
 
-public class BBTemaTest {
+public class WBTemaTest {
 
     public Service service;
 
