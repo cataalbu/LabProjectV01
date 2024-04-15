@@ -38,7 +38,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void testAddStudent() {
+    public void integration_testAddStudent() {
         long studentsCount = StreamSupport.stream(service.findAllStudents().spliterator(), false).count();
         service.saveStudent("100", "Nume", 222);
 
@@ -47,7 +47,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void testAddTema() {
+    public void integration_testAddTema() {
         long temaCount = StreamSupport.stream(service.findAllTeme().spliterator(), false).count();
         service.saveTema("100", "descriere", 7, 5);
 
@@ -56,7 +56,7 @@ public class IntegrationTest {
     }
 
     @Test
-    public void testAddNota() throws IOException {
+    public void integration_testAddNota() throws IOException {
         long noteCount = StreamSupport.stream(service.findAllNote().spliterator(), false).count();
         service.saveNota("1", "1", 9, 7, "bravo");
         assertEquals(noteCount + 1, StreamSupport.stream(service.findAllNote().spliterator(), false).count());
@@ -69,7 +69,7 @@ public class IntegrationTest {
 
 
     @Test
-    public void testAddAll() throws IOException {
+    public void integration_testAddAll() throws IOException {
         long studentsCount = StreamSupport.stream(service.findAllStudents().spliterator(), false).count();
         long temaCount = StreamSupport.stream(service.findAllTeme().spliterator(), false).count();
         long noteCount = StreamSupport.stream(service.findAllNote().spliterator(), false).count();
