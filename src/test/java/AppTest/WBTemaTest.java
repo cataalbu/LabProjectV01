@@ -62,7 +62,14 @@ public class WBTemaTest {
     @Test
     public void testAddIncorrectDeadlineToList() {
         long temaCount = StreamSupport.stream(service.findAllTeme().spliterator(), false).count();
-        service.saveTema("100", "descriere", 2, 5);
+        service.saveTema("100", "descriere", 15, 5);
+        assertEquals(temaCount, StreamSupport.stream(service.findAllTeme().spliterator(), false).count());
+    }
+
+    @Test
+    public void testAddIncorrectStartlineToList() {
+        long temaCount = StreamSupport.stream(service.findAllTeme().spliterator(), false).count();
+        service.saveTema("100", "descriere", 12, 15);
         assertEquals(temaCount, StreamSupport.stream(service.findAllTeme().spliterator(), false).count());
     }
 
